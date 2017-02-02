@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Confesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lover name</th>
+      <th>Lover sex</th>
+      <th>Cf title</th>
+      <th>Cf body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_confesses.each do |user_confess| %>
+      <tr>
+        <td><%= user_confess.lover_name %></td>
+        <td><%= user_confess.lover_sex %></td>
+        <td><%= user_confess.cf_title %></td>
+        <td><%= user_confess.cf_body %></td>
+        <td><%= link_to 'Show', user_confess %></td>
+        <td><%= link_to 'Edit', edit_user_confess_path(user_confess) %></td>
+        <td><%= link_to 'Destroy', user_confess, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User confess', new_user_confess_path %>

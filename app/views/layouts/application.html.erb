@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confession</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if current_user || true %>
+    <%= render "layouts/header" %>
+    <!-- Main -->
+    <div class="container">
+      <div class="row">
+        <%= render "layouts/navigation" %>
+        <div class="col-md-9" id="mainContent">
+          <%= yield %>
+        </div>
+      </div>
+    </div><!--/container-->
+    <!-- /Main -->
+    <%= render "layouts/modal" %>
+  <% else %>
+    <%= yield %>
+  <% end %>
+
+</body>
+</html>

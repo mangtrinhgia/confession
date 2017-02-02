@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lover name:</strong>
+  <%= @user_confess.lover_name %>
+</p>
+
+<p>
+  <strong>Lover sex:</strong>
+  <%= @user_confess.lover_sex %>
+</p>
+
+<p>
+  <strong>Cf title:</strong>
+  <%= @user_confess.cf_title %>
+</p>
+
+<p>
+  <strong>Cf body:</strong>
+  <%= @user_confess.cf_body %>
+</p>
+
+<%= link_to 'Edit', edit_user_confess_path(@user_confess) %> |
+<%= link_to 'Back', user_confesses_path %>

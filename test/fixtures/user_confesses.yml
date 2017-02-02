@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lover_name: MyString
+  lover_sex: MyString
+  cf_title: MyString
+  cf_body: MyText
+
+two:
+  lover_name: MyString
+  lover_sex: MyString
+  cf_title: MyString
+  cf_body: MyText
